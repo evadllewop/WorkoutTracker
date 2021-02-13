@@ -41,6 +41,7 @@ module.exports = function (app) {
                 res.json(dbWorkout);
             })
             .catch(err => {
+                console.log(err);
                 res.json(err);
             });
     })
