@@ -57,16 +57,4 @@ module.exports = function (app) {
             });
     })
 
-    app.put("/api/workouts/", (req, res) => {
-        Workout.findByIdAndRemove(
-            req.body.id,
-        )
-            .then(dbWorkout => {
-                res.json(dbWorkout);
-            })
-            .catch(err => {
-                res.json(err);
-            });
-    })
-
 };
